@@ -15,6 +15,9 @@ COURSE_BULLETIN_URL = "http://appserver.fet.edu.jo:7778/courses/index.jsp"
 FRONTEND_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "frontend"))
 app = Flask(__name__, static_folder=FRONTEND_DIR, static_url_path="/")
 
+@app.get("/")
+def index():
+    return app.send_static_file("index.html")
 # كاش لجريدة المواد (نتيجة السكربر)
 _offered_cache: Dict[str, dict] = {}
 _cache_lock = threading.Lock()
