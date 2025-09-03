@@ -14,12 +14,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 # App files
 COPY . .
 
-# Environment for headless Chrome + tidy logs
-ENV PORT=8000
+# Env
 ENV HEADLESS=1
 ENV PYTHONUNBUFFERED=1
 ENV CHROME_BIN=/usr/bin/chromium
 ENV CHROMEDRIVER_PATH=/usr/bin/chromedriver
 
-# Start server with Gunicorn
-CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:8000", "--workers", "2", "--timeout", "120"]
+# Bind to platform port if provided, fallback to 8000
+CMD ["bash","-lc","gunicorn app:app --bind 0.0.0.0:${PORT:-8000} --workers 2 --timeout 180"]
