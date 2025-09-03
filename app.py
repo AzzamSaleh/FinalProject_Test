@@ -2,34 +2,45 @@
 from __future__ import annotations
 import os, threading, re
 from typing import Dict
-
 from flask import Flask, jsonify, request, send_from_directory
 import engine
 
-
-
-# --- add near the top of app.py ---
+# رابط جريدة المواد
 COURSE_BULLETIN_URL = "http://appserver.fet.edu.jo:7778/courses/index.jsp"
 
-# يقدّم الواجهة من ../frontend (عدّل المسار حسب مشروعك)
-FRONTEND_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "frontend"))
+# اخدم الواجهة من مجلد ./frontend (نفس مستوى app.py)
+FRONTEND_DIR = os.path.join(os.path.dirname(__file__), "frontend")
 app = Flask(__name__, static_folder=FRONTEND_DIR, static_url_path="/")
 
-@app.get("/")
-def index():
-    return app.send_static_file("index.html")
-# كاش لجريدة المواد (نتيجة السكربر)
+# Health check مفيد على المزودين
+@app.get("/healthz")
+def healthz():
+    return "ok", 200
+
+# كاش لنتائج السكربر
 _offered_cache: Dict[str, dict] = {}
 _cache_lock = threading.Lock()
 
 # -------- سكربر Placeholder (صِل سكربرك الحقيقي هنا) --------
 def scrape_offered_courses_placeholder() -> Dict[str, dict]:
     """
-    إذا لديك سكربر Selenium يعيد:
-    { 'ELE1234': {'name': '...', 'hours': 3, 'sections': [
-        {'dept':10,'instructor':'...','state':'...','times':['ث 10:00 11:00','ر 10:00 11:00'],'time':'ث 10:00 11:00 | ر 10:00 11:00'}
-    ]}, ... }
-    فاستبدل هذا بـ return من سكربرك.
+    الشكل المطلوب:
+    {
+      'ELE1234': {
+        'name': 'اسم المادة',
+        'hours': 3,
+        'sections': [
+          {
+            'dept': 10,
+            'instructor': '...',
+            'state': 'نشطة',
+            'times': ['ث 10:00 11:00','ر 10:00 11:00'],
+            'time': 'ث 10:00 11:00 | ر 10:00 11:00'
+          }
+        ]
+      },
+      ...
+    }
     """
     return {}
 
@@ -64,7 +75,7 @@ def _normalize_ar(name: str) -> str:
 def _map_offered_to_plan(offered_by_code: dict) -> dict:
     """
     يُرجع: قاموس مَفاتيحه = اسم المادة بالعربية كما في (engine.plan),
-           وقيمه = {hours, code, sections:[...], time/instructor/state (سِطحيّة اختيارية)}
+           وقيمه = {hours, code, sections:[...], time/instructor/state}
     مع مطابقة مرنة للأسماء.
     """
     offered_by_name = {}
@@ -89,15 +100,18 @@ def _map_offered_to_plan(offered_by_code: dict) -> dict:
     for offered_name, meta in offered_by_name.items():
         on = _normalize_ar(offered_name)
 
+        # تطابق حرفي بعد التطبيع
         if on in plan_norm:
             mapped[ plan_norm[on] ] = meta
             continue
 
+        # تطابق جزئي
         candidates = [pn for pn_norm, pn in plan_norm.items() if on in pn_norm or pn_norm in on]
         if len(candidates) == 1:
             mapped[candidates[0]] = meta
             continue
 
+        # تقاطع توكنات
         toks_on = set(on.split())
         best = None
         best_score = 0
@@ -114,7 +128,7 @@ def _map_offered_to_plan(offered_by_code: dict) -> dict:
 
 # -------- المسارات --------
 @app.get("/")
-def index():
+def home():
     return send_from_directory(FRONTEND_DIR, "index.html")
 
 @app.get("/api/plan")
@@ -226,4 +240,5 @@ def api_recommend():
     return jsonify({"ok": True, "total_hours": int(total), "courses": result, "conflicts": []})
 
 if __name__ == "__main__":
+    # للتشغيل المحلي
     app.run(host="127.0.0.1", port=5000, debug=False)
