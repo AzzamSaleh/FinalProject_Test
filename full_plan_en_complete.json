@@ -1,0 +1,639 @@
+{
+    
+    "35001101": {
+        "name": "علم عسكري",
+        "hours": 3,
+        "prerequisites": [],
+        "category": "university_required",
+        "min_hours": 90
+    },
+    "AAL101": {
+        "name": "لغة عربية تطبيقية",
+        "hours": 3,
+        "prerequisites": ["301501199"],
+        "category": "university_required"
+    },
+    "AEL101": {
+        "name": "لغة انجليزية تطبيقية 1",
+        "hours": 3,
+        "prerequisites": ["AEL099"],
+        "category": "university_required"
+    },
+    "AEL102": {
+        "name": "لغة انجليزية تطبيقية  2",
+        "hours": 3,
+        "prerequisites": [
+            "AEL101"
+        ],
+        "category": "university_required"
+    },
+    "NE101": {
+        "name": "التربية الوطنية والسلوك المدني",
+        "hours": 3,
+        "prerequisites": [],
+        "category": "university_required"
+    },
+    "CS101": {
+        "name": "مهارات الحاسوب والتعليم الإلكتروني",
+        "hours": 1,
+        "prerequisites": ["35005099"],
+        "category": "university_required"
+    },
+    "IEC101": {
+        "name": "الابتكار والريادة والإبداع",
+        "hours": 2,
+        "prerequisites": [],
+        "category": "university_required"
+    },
+    "36001101": {
+        "name": "مهارات الإتصال",
+        "hours": 3,
+        "prerequisites": [],
+        "category": "elective_requirements"
+        
+    },
+    "36003103": {
+        "name": "المجتمع الاردني",
+        "hours": 3,
+        "prerequisites": [],
+        "category": "elective_requirements"
+        
+    },
+    "36005105": {
+        "name": "الثقافة الإسلامية",
+        "hours": 3,
+        "prerequisites": [],
+        "category": "elective_requirements"
+        
+    },
+    "36007107": {
+        "name": "الزراعة في الاردن",
+        "hours": 3,
+        "prerequisites": [],
+        "category": "elective_requirements"
+        
+    },
+    "36008108": {
+        "name": "البيئة والمجتمع",
+        "hours": 3,
+        "prerequisites": [],
+        "category": "elective_requirements"
+        
+    },
+    "36012109": {
+        "name": "الخلفاء الراشدين",
+        "hours": 3,
+        "prerequisites": [],
+        "category": "elective_requirements"
+        
+    },
+    "36009111": {
+        "name": "مفاهيم اقتصادية",
+        "hours": 3,
+        "prerequisites": [],
+        "category": "elective_requirements"
+        
+    },
+    "36009110": {
+        "name": "مفاهيم ومهارات ادارية مـعاصرة",
+        "hours": 3,
+        "prerequisites": [],
+        "category": "elective_requirements"
+    },
+    "36004104": {
+        "name": "الرياضة للجميــــع",
+        "hours": 3,
+        "prerequisites": [],
+        "category": "elective_requirements"
+    },
+    "36009114": {
+        "name": "القدس (القضية الفلسطينية)",
+        "hours": 3,
+        "prerequisites": [],
+        "category": "elective_requirements"
+    },
+    "36009115": {
+        "name": "المجتمع الرقمي",
+        "hours": 3,
+        "prerequisites": [],
+        "category": "elective_requirements"
+    },
+    "36009109": {
+        "name": "الاسلام والحياة",
+        "hours": 3,
+        "prerequisites": [],
+        "category": "elective_requirements"
+    },
+    "36002102": {
+        "name": "مبادئ علم النفس",
+        "hours": 3,
+        "prerequisites": [],
+        "category": "elective_requirements"
+    },
+    "36009112": {
+        "name": "القانون والاعلام والمجتمع",
+        "hours": 3,
+        "prerequisites": [],
+        "category": "elective_requirements"
+    },
+    "TS105": {
+        "name": "السلامة المرورية",
+        "hours": 3,
+        "prerequisites": [],
+        "category": "elective_requirements"
+    },
+    
+    "30202101": {
+        "name": "التفاضل والتكامل (1)",
+        "hours": 3,
+        "prerequisites": [],
+        "category": "college_required"
+    },
+    "30202102": {
+        "name": "التفاضل والتكامل (2)",
+        "hours": 3,
+        "prerequisites": [
+            "30202101"
+        ],
+        "category": "college_required"
+    },
+    "30201101": {
+        "name": "الفيزياء العامة (1)",
+        "hours": 3,
+        "prerequisites": [],
+        "category": "college_required"
+    },
+    "30201111": {
+        "name": "الفيزياء العامة عملي (1)",
+        "hours": 1,
+        "prerequisites": [
+            "30201101"
+        ],
+        "category": "college_required"
+    },
+    "30206101": {
+        "name": "الكيمياء العامة (1)",
+        "hours": 3,
+        "prerequisites": [],
+        "category": "college_required"
+    },
+    "30206102": {
+        "name": "الكيمياء العامة العملي (1)",
+        "hours": 1,
+        "prerequisites": [
+            "30206101"
+        ],
+        "category": "college_required"
+    },
+    "30202203": {
+        "name": "المعادلات التفاضلية العادية",
+        "hours": 3,
+        "prerequisites": [
+            "30202102"
+        ],
+        "category": "college_required"
+    },
+    "BSE0203": {
+        "name": "الكتابة الفنية والأخلاقيات المهنية",
+        "hours": 3,
+        "prerequisites": ["AEL102"],
+        "category": "college_required"
+    },
+    "BSE0205": {
+        "name": "رسم هندسي",
+        "hours": 3,
+        "prerequisites": ["CS101"],
+        "category": "college_required"
+    },
+    "BSE0102": {
+        "name": "مشغل هندسي",
+        "hours": 2,
+        "prerequisites": [],
+        "category": "college_required"
+    },
+    "BSE0401": {
+        "name": "اقتصاد هندسي",
+        "hours": 1,
+        "prerequisites": [],
+        "category": "college_required",
+        "min_hours": 80
+        
+    },
+    "30201102": {
+        "name": "الفيزياء العامة (2)",
+        "hours": 3,
+        "prerequisites": [
+            "30201101"
+        ],
+        "category": "college_required"
+    },
+    "BSE0201": {
+        "name": "البرمجة للمهندسين",
+        "hours": 3,
+        "prerequisites": ["CS101"],
+        "category": "college_required"
+    },
+    "BSE0306": {
+        "name": "تقنيات عددية",
+        "hours": 3,
+        "prerequisites": [
+            "30202102"
+        ],
+        "category": "major_required"
+    },
+    "ELE0211": {
+        "name": "دوائر كهربائية (1)",
+        "hours": 3,
+        "prerequisites": [
+            "30201102"
+        ],
+        "category": "major_required"
+    },
+    "ELE0205": {
+        "name": "جبر خطي",
+        "hours": 3,
+        "prerequisites": [
+            "30202102"
+        ],
+        "category": "major_required"
+    },
+    "ELE0216": {
+        "name": "الكترونيات (1)",
+        "hours": 3,
+        "prerequisites": [
+            "ELE0211"
+        ],
+        "category": "major_required"
+    },
+    "ELE0228": {
+        "name": "انظمة المعالجات الدقيقة",
+        "hours": 3,
+        "prerequisites": [
+            "ELE0213"
+        ],
+        "category": "major_required"
+    },
+    "ELE0321": {
+        "name": "انظمة واشارات",
+        "hours": 3,
+        "prerequisites": [
+            "ELE0211"
+        ],
+        "category": "major_required"
+    },
+    
+    
+    "ELE0313": {
+        "name": "مختبر الإلكترونيات",
+        "hours": 1,
+        "prerequisites": [
+            "ELE0216"
+        ],
+        "category": "major_required"
+    },
+    "ELE0334": {
+        "name": "انظمة التحكم",
+        "hours": 3,
+        "prerequisites": [
+            "ELE0321"
+        ],
+        "category": "major_required"
+    },
+    "ELE0335": {
+        "name": "الات كهربائية (1)",
+        "hours": 3,
+        "prerequisites": [
+            "ELE0212"
+        ],
+        "category": "major_required"
+    },
+    "ELE0431": {
+        "name": "مختبر انظمة التحكم",
+        "hours": 1,
+        "prerequisites": [
+            "ELE0334"
+        ],
+        "category": "major_required"
+    },
+    "ELE0442": {
+        "name": "التدريب الميداني",
+        "hours": 3,
+        "prerequisites": [],
+        "min_hours": 115,
+        "category": "major_required"
+    },
+    "ELE0541": {
+        "name": "مشروع التخرج1",
+        "hours": 3,
+        "prerequisites": [],
+        "min_hours": 120,
+        "category": "major_required"
+    },
+    "ELE0542": {
+        "name": "مشروع التخرج 2",
+        "hours": 3,
+        "prerequisites": [
+            "ELE0541"
+        ],
+        "category": "major_required"
+    },
+    "ELE5252": {
+        "name": "تراكيــب البيانات والخوارزميــات",
+        "hours": 3,
+        "prerequisites": [
+            "ELE5251"
+        ],
+        "category": "major_required"
+    },
+    "ELE5216": {
+        "name": "مختبر تصميم المنطق الرقمي",
+        "hours": 1,
+        "prerequisites": [
+            "ELE0213"
+        ],
+        "category": "major_required"
+    },
+    "ELE4314": {
+        "name": "الكترونيات رقمية",
+        "hours": 3,
+        "prerequisites": [
+            "ELE0216"
+        ],
+        "category": "major_required"
+    },
+    "ELE5254": {
+        "name": "مختبر تراكيب البيانات والخوارزميات",
+        "hours": 1,
+        "prerequisites": ["ELE5252"],
+        "category": "major_required"
+        
+    },
+    "ELE0214": {
+        "name": "مختبر دوائر كهربائية",
+        "hours": 1,
+        "prerequisites": [
+            "ELE0212"
+        ],
+        "category": "major_required"
+    },
+    "ELE0322": {
+        "name": "اتصالات وتراسل البيانات",
+        "hours": 3,
+        "prerequisites": ["ELE0321"],
+        "category": "major_required"
+    },
+    "ELE03282": {
+        "name": "مختبر انظمة المعالجات الدقيقة",
+        "hours": 1,
+        "prerequisites": [
+            "ELE0228"
+        ],
+        "category": "major_required"
+    },
+    "ELE0213": {
+        "name": "تصميم المنطق الرقمي",
+        "hours": 3,
+        "prerequisites": [
+            "BSE0201"
+        ],
+        "category": "major_required"
+    },
+    "ELE6461": {
+        "name": "اساسيات شبكات الحاسوب",
+        "hours": 3,
+        "prerequisites": [
+            "ELE0322"
+        ],
+        "category": "major_required"
+    },
+    "ELE5361": {
+        "name": "معمارية الحاسوب وتنظيمـــه",
+        "hours": 3,
+        "prerequisites": [
+            "ELE0228"
+        ],
+        "category": "major_required"
+    },
+    "ELE5364": {
+        "name": "مختبر معمارية الحاسوب وتنظيمه",
+        "hours": 1,
+        "prerequisites": ["ELE5361"],
+        "category": "major_required"
+    },
+    "ELE5362": {
+        "name": "نظم التشغيل",
+        "hours": 3,
+        "prerequisites": [
+            "ELE5252"
+        ],
+        "category": "major_required"
+    },
+    "ELE5455": {
+        "name": "مختبر انظمة وقواعد البيانات",
+        "hours": 1,
+        "prerequisites": [
+            "ELE5354"
+        ],
+        "category": "major_required"
+    },
+    "ELE6466": {
+        "name": "بروتوكولات الشبكات",
+        "hours": 3,
+        "prerequisites": [
+            "ELE6461"
+        ],
+        "category": "major_required"
+    },
+    "ELE5461": {
+        "name": "الانظمة المضمنة",
+        "hours": 3,
+        "prerequisites": [
+            "ELE5362","ELE5361"
+        ],
+        "category": "major_required"
+    },
+    "ELE5462": {
+        "name": "مختبر الانظمة المضمنة",
+        "hours": 1,
+        "prerequisites": [
+            "ELE5461"
+        ],
+        "category": "major_required"
+    },
+    "ELE5466": {
+        "name": "انظمة المعـالجة المتوازية",
+        "hours": 3,
+        "prerequisites": [
+            "ELE5361"
+        ],
+        "category": "major_required"
+    },
+    "ELE5563": {
+        "name": "مختبر انظمة المعالجة المتوازية",
+        "hours": 1,
+        "prerequisites": [
+            "ELE5466"
+        ],
+        "category": "major_required"
+    },
+    "ELE6472": {
+        "name": "اساسيات الامن السيبراني",
+        "hours": 3,
+        "prerequisites": [
+            "ELE6461"
+        ],
+        "category": "major_required"
+    },
+    "ELE5467": {
+        "name": "معمارية الحواسيب المتقدمة",
+        "hours": 3,
+        "prerequisites": [
+            "ELE5361"
+        ],
+        "category": "major_required"
+    },
+    "ELE5551": {
+        "name": "البرمجة المتقدمة",
+        "hours": 1,
+        "prerequisites": [
+            "ELE5252"
+        ],
+        "category": "major_required"
+    },
+    "ELE5454": {
+        "name": "مختبر الذكاء الاصطناعي وتعلم الالة",
+        "hours": 1,
+        "prerequisites": [
+            "ELE5453"
+        ],
+        "category": "major_required"
+    },
+    "ELE5251": {
+        "name": "البرمجة بلغة الكيــــنونة",
+        "hours": 3,
+        "prerequisites": [
+            "BSE0201"
+        ],
+        "category": "major_required"
+    },
+    "BSE0202": {
+        "name": "احصاء واحتمالات للهندسة",
+        "hours": 3,
+        "prerequisites": [
+            "30202102"
+        ],
+        "category": "major_required"
+    },
+    "ELE6464": {
+        "name": "مختبر شبكات الحاسوب",
+        "hours": 3,
+        "prerequisites": [
+            "ELE6461"
+        ],
+        "category": "major_required"
+    },
+    "ELE5354": {
+        "name": "انظمة قواعد البيانات",
+        "hours": 3,
+        "prerequisites": [
+            "ELE5252"
+        ],
+        "category": "major_required"
+    },
+    "ELE5453": {
+        "name": "الذكاء الاصطناعي وتعلم الالة",
+        "hours": 3,
+        "prerequisites": [
+            "ELE5251","BSE0202"
+        ],
+        "category": "major_required"
+    },
+    "ELE0212": {
+        "name": "دوائر كهربائية (2)",
+        "hours": 3,
+        "prerequisites": [
+            "ELE0211"
+        ],
+        "category": "major_required"
+    },
+    "ELE5565": {
+        "name": "موضوعات خاصة في هندسة الحاسوب",
+        "hours": 3,
+        "prerequisites": [
+            
+        ],
+        "min_hours": 90,
+        "category": "major_optional"
+    },
+    "ELE6566": {
+        "name": "الحوسبة السحابية",
+        "hours": 3,
+        "prerequisites": [
+            "ELE6466"
+        ],
+        "min_hours": 90,
+        "category": "major_optional"
+    },
+    "ELE5512": {
+        "name": "تصميم رقمي متقدم",
+        "hours": 3,
+        "prerequisites": [
+            "ELE5361"
+        ],
+        "category": "major_optional"
+    },
+    "ELE6463": {
+        "name": "انترنت الاشياء",
+        "hours": 3,
+        "prerequisites": [
+            "ELE6466"
+        ],
+        "min_hours": 90,
+        "category": "major_optional"
+    },
+    "ELE5559": {
+        "name": "المنطق المشوش والشبكات العصبونية",
+        "hours": 3,
+        "prerequisites": [
+            
+        ],
+        "min_hours": 90,
+        "category": "major_optional"
+    },
+    "ELE5568": {
+        "name": "تقييم اداء الحاسوب",
+        "hours": 3,
+        "prerequisites": [
+            "ELE5361"
+        ],
+        
+        "category": "major_optional"
+    },
+    "ELE5527": {
+        "name": "معالجة الصور الرقمية",
+        "hours": 3,
+        "prerequisites": [
+            "ELE0321"
+        ],
+        "min_hours": 90,
+        "category": "major_optional"
+    },
+    "35005099": {
+        "name": "مهارات الحاسوب الاستدراكي",
+        "hours": 3,
+        "prerequisites": [],
+        "category": "Remedial materials"
+    },
+    "AEL099": {
+        "name": "اللغة الانجليزية التطبيقيـــــة 99",
+        "hours": 3,
+        "prerequisites": [],
+        "category": "Remedial materials"
+    },
+    "301501199": {
+        "name": "اللغة العربية 99",
+        "hours": 3,
+        "prerequisites": [],
+        "category": "Remedial materials"
+    }
+}
